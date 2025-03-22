@@ -1,0 +1,11 @@
+select top 5 * from Employees;
+SELECT DISTINCT ProductName from Products;
+select * from Products where Price > 100;
+select * from Customers where FirstName like 'A%';
+select * from Products order by Price asc;
+select * from Employees where Salary >= 60000 and DepartmentName = 'HR';
+select isnull (Email, 'noemail@example.com') as 'No email' from Employees;
+select * from products where Price > 50 and Price < 100;
+select distinct Category, ProductName from Products;
+select distinct Category, ProductName from Products order by ProductName desc;
+select top 10 * from Products order by Price DESC;
