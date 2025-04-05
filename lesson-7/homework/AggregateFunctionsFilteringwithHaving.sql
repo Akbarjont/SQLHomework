@@ -15,7 +15,7 @@
 15. select DepartmentName, avg(salary) as AVGsalary, count(employeeid) as numberOfEmployees from Employees group by DepartmentName
 16. select Category, AVG(price) as AVGprice from Products group by Category having (AVG(price)) > 400
 17. select YEAR(saledate) as years, SUM(saleamount) as TotalSales from Sales group by YEAR(saledate)
-18. select customerid, COUNT(saleid) as numberOfOrders from Sales group by customerid having (COUNT(saleid))>3
+18. select count(quantity) from Orders where quantity>=3
 19. select DepartmentName, sum(Salary) from Employees group by DepartmentName having sum(Salary) > 500000
 20. select productid, AVG(saleamount) from Sales group by productid having (AVG(saleamount))>200
 21. select CustomerID, sum(saleamount) from Sales group by CustomerID having (sum(saleamount))>1500
