@@ -21,5 +21,5 @@
 21. select CustomerID, sum(saleamount) from Sales group by CustomerID having (sum(saleamount))>1500
 22. select DepartmentName, SUM(salary) as TotalSalary, AVG(salary) as AvgSalary from Employees Group by DepartmentName having (AVG(salary))>65000
 23. select CustomerID, MAX(TotalAmount) AS MAXorderValue, min(totalamount) as MINorderValue, SUM(totalamount) as CustomersTotalAmount from Orders group by CustomerID HAVING (min(totalamount)> 50
-24. select MONTH(SaleDate) as SaleMonth, sum(Saleamount) as MonthlySale, COUNT(distinct SaleID) as NumberOfSales from Sales Group by MONTH(SaleDate) Having (COUNT(distinct SaleID)) > 8
+24. select MONTH(SaleDate) as SaleMonth, sum(Saleamount) as MonthlySale, COUNT(distinct SaleID) as NumberOfSales from Sales Group by MONTH(SaleDate) Having (COUNT(distinct ProductID)) > 8
 25. select YEAR(OrderDate) as years, Min(Quantity) as MinOrderQuantity, Max(Quantity) as MaxOrderQuantity  from Orders Group by YEAR(OrderDate)
