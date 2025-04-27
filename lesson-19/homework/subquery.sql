@@ -1,0 +1,10 @@
+1. select * from employees where salary = (select MIN(salary) from employees)
+2. select * from products where price > (select AVG(price) from products)
+3. select * from employees where department_id = (select id from departments where department_name = 'Sales')
+4. select * from customers where customer_id not in (select customer_id from orders)
+5. select * from products p1 where price = (select MAX(price) from products where p1.category_id=category_id group by category_id)
+6. select * from employees e1 where e1.department_id = (select top 1 department_id from employees group by department_id order by AVG(salary) desc)
+7. select * from employees e1 where e1.salary > (select AVG(salary) from employees e2 where e1.department_id=e2.department_id group by department_id)
+8. select * from grades g1 where grade in (select MAX(grade) from grades g2 where g1.course_id=g2.course_id group by course_id)
+9. 
+10. select * from employees e1 where salary > (select AVG(salary) from employees) and salary < (select MAX(salary) from employees e2 where e1.department_id=e2.department_id group by department_id)
